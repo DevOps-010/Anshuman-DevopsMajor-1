@@ -13,8 +13,8 @@ This project demonstrates the deployment of an OpenAI-powered Chatbot UI using D
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NotHarshhaa/DevOps-Projects/DevOps-Project-28/Chatbot-UI.git
-   cd Chatbot-UI
+   git clone https://github.com/DevOps-010/Anshuman-DevopsMajor-1.git
+   cd Anshuman-DevopsMajor-1
    ```
 
 2. Follow the detailed setup instructions in the [Devops.md](./Devops.md) file.
@@ -24,11 +24,3 @@ This project demonstrates the deployment of an OpenAI-powered Chatbot UI using D
 ## Documentation
 
 For detailed instructions, refer to the [Devops.md](./Devops.md) file.
-
-## Contributing
-
-We welcome contributions! Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
