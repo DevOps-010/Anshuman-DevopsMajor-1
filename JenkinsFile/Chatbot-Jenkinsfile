@@ -10,7 +10,7 @@ pipeline{
     stages {
         stage('Checkout from Git'){
             steps{
-                git branch: 'master', url: 'https://github.com/NotHarshhaa/DevOps-Projects/DevOps-Project-28/Chatbot-UI.git'
+                git branch: 'master', url: 'https://github.com/DevOps-010/Anshuman-DevopsMajor-1.git'
             }
         }
         stage('Install Dependencies') {
@@ -49,15 +49,15 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build -t chatbot ."
-                       sh "docker tag chatbot NotHarshhaa/chatbot:latest "
-                       sh "docker push NotHarshhaa/chatbot:latest "
+                       sh "docker tag chatbot anshuman/chatbot:latest "
+                       sh "docker push anshuman/chatbot:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image NotHarshhaa/chatbot:latest > trivy.json" 
+                sh "trivy image anshuman/chatbot:latest > trivy.json" 
             }
         }
         stage ("Remove container") {
@@ -68,7 +68,7 @@ pipeline{
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name chatbot -p 3000:3000 NotHarshhaa/chatbot:latest'
+                sh 'docker run -d --name chatbot -p 3000:3000 anshuman/chatbot:latest'
             }
         }
         stage('Deploy to kubernetes'){
